@@ -110,72 +110,72 @@ We formalize the following results from van der Vaart (1998),
 
 The concept layer that downstream theorems quantify over.
 
-| Name | File | Reference |
-|------|------|-----------|
-| `DifferentiableQuadraticMean` | `DQM/Defs.lean` | vdV (1998), Eq (7.1) — Differentiability in Quadratic Mean |
-| `QMDPath` | `Core/QMDPath.lean` | vdV (1998), §7.2 — quadratic-mean-differentiable path |
-| `RegularEstimatorSequence` | `ParametricFamily/RegularEstimator.lean` | vdV (1998), §8.5 — regular estimator sequence |
-| `IsRegularEstimator` | `LowerBounds/RegularEstimator.lean` | vdV (1998), §25.3 — regular estimator (semiparametric) |
-| `BowlShaped` | `ForMathlib/BowlShaped.lean` | vdV (1998), §8.7 — bowl-shaped loss function |
-| `TangentSpec` | `Core/TangentAbstract.lean` | vdV (1998), §25.3 — tangent set / tangent space |
-| `IsGaussianShift` | `Experiment/GaussianShift.lean` | vdV (1998), §8.2 — Gaussian shift experiment |
-| `IsEquivariantInLaw` | `Experiment/EquivariantInLaw.lean` | vdV (1998), §8.4 — equivariant-in-law estimator |
-| `IsPGlivenkoCantelli` | `EmpiricalProcess/GlivenkoCantelli.lean` | vdV (1998), §19.1 — Glivenko–Cantelli class |
-| `IsPDonsker` | `EmpiricalProcess/Donsker.lean` | vdV (1998), §19.2 — Donsker class |
-| `IsBracket` / `IsEpsBracket` | `EmpiricalProcess/Bracketing.lean` | vdV (1998), §19.2 — ε-bracket |
-| `HasFiniteBracketingCover` | `EmpiricalProcess/Bracketing.lean` | vdV (1998), §19.2 — bracketing number `N_[](ε, F, L_r)` |
-| `IsEnvelope` | `EmpiricalProcess/FunctionClass.lean` | vdV (1998), §19.2 — envelope function |
-| `IsCoarseningAtRandom` | `Operators/CAR.lean` | vdV (1998), §25.6 — coarsening at random |
+| Results | Name | File |
+|-----------|------|------|
+| vdV (1998), Eq (7.1) — Differentiability in Quadratic Mean | `DifferentiableQuadraticMean` | `DQM/Defs.lean` |
+| vdV (1998), §7.2 — quadratic-mean-differentiable path | `QMDPath` | `Core/QMDPath.lean` |
+| vdV (1998), §8.5 — regular estimator sequence | `RegularEstimatorSequence` | `ParametricFamily/RegularEstimator.lean` |
+| vdV (1998), §25.3 — regular estimator (semiparametric) | `IsRegularEstimator` | `LowerBounds/RegularEstimator.lean` |
+| vdV (1998), §8.7 — bowl-shaped loss function | `BowlShaped` | `ForMathlib/BowlShaped.lean` |
+| vdV (1998), §25.3 — tangent set / tangent space | `TangentSpec` | `Core/TangentAbstract.lean` |
+| vdV (1998), §8.2 — Gaussian shift experiment | `IsGaussianShift` | `Experiment/GaussianShift.lean` |
+| vdV (1998), §8.4 — equivariant-in-law estimator | `IsEquivariantInLaw` | `Experiment/EquivariantInLaw.lean` |
+| vdV (1998), §19.1 — Glivenko–Cantelli class | `IsPGlivenkoCantelli` | `EmpiricalProcess/GlivenkoCantelli.lean` |
+| vdV (1998), §19.2 — Donsker class | `IsPDonsker` | `EmpiricalProcess/Donsker.lean` |
+| vdV (1998), §19.2 — ε-bracket | `IsBracket` / `IsEpsBracket` | `EmpiricalProcess/Bracketing.lean` |
+| vdV (1998), §19.2 — bracketing number `N_[](ε, F, L_r)` | `HasFiniteBracketingCover` | `EmpiricalProcess/Bracketing.lean` |
+| vdV (1998), §19.2 — envelope function | `IsEnvelope` | `EmpiricalProcess/FunctionClass.lean` |
+| vdV (1998), §25.6 — coarsening at random | `IsCoarseningAtRandom` | `Operators/CAR.lean` |
 
 ### Local Asymptotic Normality
 
-| Name | File | Reference |
-|------|------|-----------|
-| `paramSubmodel_DQM` | `ParametricFamily/SubmodelDQM.lean` | vdV (1998), Eq (7.1) — parametric submodel is differentiable in quadratic mean |
-| `LAN_expansion` | `LocalAsymptoticNormality/LANExpansion.lean` | vdV (1998), Thm 7.2 — local asymptotic normality of the log-likelihood via score and Fisher information |
+| Results | Name | File |
+|-----------|------|------|
+| vdV (1998), Eq (7.1) — parametric submodel is differentiable in quadratic mean | `paramSubmodel_DQM` | `ParametricFamily/SubmodelDQM.lean` |
+| vdV (1998), Thm 7.2 — local asymptotic normality of the log-likelihood via score and Fisher information | `LAN_expansion` | `LocalAsymptoticNormality/LANExpansion.lean` |
 
 ### Parametric Efficiency
 
-| Name | File | Reference |
-|------|------|-----------|
-| `contiguous_local_alternatives` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` | vdV (1998), Thm 6.5 — mutual contiguity of local alternative sequences |
-| `regularity_implies_8_2_hypothesis` | `Efficiency/HajekLeCamConvolution.lean` | vdV (1998), Thm 8.2 — regular estimators satisfy the convergence-of-experiments hypothesis |
-| `LAN_representation_vdV` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` | vdV (1998), Thm 8.4 — asymptotic representation via a Gaussian-shift Markov kernel |
-| `anderson_lemma_set` | `ForMathlib/Anderson.lean` | vdV (1998), Lem 8.5 — Anderson's lemma for Gaussian superlevel sets |
-| `hajek_le_cam_convolution_theorem` | `Efficiency/HajekLeCamConvolution.lean` | vdV (1998), Thm 8.8 — regular estimator limit factors as a Gaussian convolution |
-| `local_asymptotic_minimax_bound` | `Efficiency/LocalAsymptoticMinimax.lean` | vdV (1998), Thm 8.11 — local asymptotic minimax lower bound for the risk |
+| Results | Name | File |
+|-----------|------|------|
+| vdV (1998), Thm 6.5 — mutual contiguity of local alternative sequences | `contiguous_local_alternatives` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` |
+| vdV (1998), Thm 8.2 — regular estimators satisfy the convergence-of-experiments hypothesis | `regularity_implies_8_2_hypothesis` | `Efficiency/HajekLeCamConvolution.lean` |
+| vdV (1998), Thm 8.4 — asymptotic representation via a Gaussian-shift Markov kernel | `LAN_representation_vdV` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` |
+| vdV (1998), Lem 8.5 — Anderson's lemma for Gaussian superlevel sets | `anderson_lemma_set` | `ForMathlib/Anderson.lean` |
+| vdV (1998), Thm 8.8 — regular estimator limit factors as a Gaussian convolution | `hajek_le_cam_convolution_theorem` | `Efficiency/HajekLeCamConvolution.lean` |
+| vdV (1998), Thm 8.11 — local asymptotic minimax lower bound for the risk | `local_asymptotic_minimax_bound` | `Efficiency/LocalAsymptoticMinimax.lean` |
 
 ### Empirical processes
 
-| Name | File | Reference |
-|------|------|-----------|
-| `isPGlivenkoCantelli_of_finite_bracketing_L1` | `EmpiricalProcess/GlivenkoCantelli.lean` | vdV (1998), Thm 19.4 — finite L¹-bracketing implies the Glivenko–Cantelli property |
-| `isPDonsker_of_finite_bracketing_entropy_integral` | `EmpiricalProcess/DonskerBracketing.lean` | vdV (1998), Thm 19.5 — finite bracketing entropy integral implies the Donsker property |
-| `donsker_random_function_consistency` | `EmpiricalProcess/RandomFunctions.lean` | vdV (1998), Lem 19.24 — empirical process at a consistent random argument is negligible |
-| `empiricalProcess_param_estimation` | `EmpiricalProcess/ParameterEstimation.lean` | vdV (1998), Thm 19.26 — empirical process convergence under estimated parameters |
-| `bernstein_inequality` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.32 — Bernstein tail bound for empirical sums |
-| `finite_sup_bound` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.33 — expected maximum over a finite function class |
-| `maximal_inequality_bracketing` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.34 — bracketing maximal inequality for the empirical process |
+| Results | Name | File |
+|-----------|------|------|
+| vdV (1998), Thm 19.4 — finite L¹-bracketing implies the Glivenko–Cantelli property | `isPGlivenkoCantelli_of_finite_bracketing_L1` | `EmpiricalProcess/GlivenkoCantelli.lean` |
+| vdV (1998), Thm 19.5 — finite bracketing entropy integral implies the Donsker property | `isPDonsker_of_finite_bracketing_entropy_integral` | `EmpiricalProcess/DonskerBracketing.lean` |
+| vdV (1998), Lem 19.24 — empirical process at a consistent random argument is negligible | `donsker_random_function_consistency` | `EmpiricalProcess/RandomFunctions.lean` |
+| vdV (1998), Thm 19.26 — empirical process convergence under estimated parameters | `empiricalProcess_param_estimation` | `EmpiricalProcess/ParameterEstimation.lean` |
+| vdV (1998), Lem 19.32 — Bernstein tail bound for empirical sums | `bernstein_inequality` | `EmpiricalProcess/Maximal.lean` |
+| vdV (1998), Lem 19.33 — expected maximum over a finite function class | `finite_sup_bound` | `EmpiricalProcess/Maximal.lean` |
+| vdV (1998), Lem 19.34 — bracketing maximal inequality for the empirical process | `maximal_inequality_bracketing` | `EmpiricalProcess/Maximal.lean` |
 
 ### Semiparametric models and efficiency
 
-| Name | File | Reference |
-|------|------|-----------|
-| `score_in_L2ZeroMean` | `Core/QMDPath.lean` | vdV (1998), Lem 25.14 — score is mean-zero and square-integrable |
-| `eif_eq_orthogonalProjection` | `Core/EIF.lean` | vdV (1998), Thm 25.18 — efficient influence function is the projection onto the tangent space |
-| `efficient_bound_eq_sup_ratio` | `Core/EIF.lean` | vdV (1998), Lem 25.19 — efficiency bound as a supremum of inner-product ratios |
-| `semiparametric_convolution_theorem` | `LowerBounds/Convolution.lean` | vdV (1998), Thm 25.20 — convolution theorem and asymptotic variance lower bound |
-| `lam_semiparametric` | `LowerBounds/LAMSemiparametric.lean` | vdV (1998), Thm 25.21 — semiparametric local asymptotic minimax bound |
-| `estimator_semiparametricallyEfficient_of_asympLinear_eif` | `Core/EfficiencyOperational.lean` | vdV (1998), Eq (25.22) — asymptotically linear estimator with the EIF is efficient |
-| `eif_from_efficientScore` | `StrictModel/EfficientScore.lean` | vdV (1998), Lem 25.25 — efficient influence function from the efficient score |
-| `eif_via_information_operator` | `Operators/ScoreOperator.lean` | vdV (1998), Eq (25.30) — efficient influence function via the information operator |
-| `eif_via_adjoint_equation` | `Operators/ScoreOperator.lean` | vdV (1998), Thm 25.31 — efficient influence function via the adjoint score equation |
-| `efficientScore_projection_formula` | `Operators/ScoreOperator.lean` | vdV (1998), Eq (25.33) — efficient score as score minus its nuisance projection |
-| `influence_on_sup_of_subtract_proj_nuisance` | `Core/EIF.lean` | vdV (1998), Cor 25.42 — influence function by subtracting the nuisance projection |
-| `zEstimator_semiparametricallyEfficient` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.54 — efficient-score Z-estimator is semiparametrically efficient |
-| `oneStep_semiparametricallyEfficient` | `Asymptotics/OneStep.lean` | vdV (1998), Thm 25.57 — one-step corrected estimator is semiparametrically efficient |
-| `zEstimator_biasResidual_expansion` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.59 — Z-estimator expansion with explicit bias–residual term |
-| `mle_semiparametricallyEfficient` | `Asymptotics/LeastFavorable.lean` | vdV (1998), Thm 25.77 — least-favorable-path MLE is semiparametrically efficient |
+| Results | Name | File |
+|-----------|------|------|
+| vdV (1998), Lem 25.14 — score is mean-zero and square-integrable | `score_in_L2ZeroMean` | `Core/QMDPath.lean` |
+| vdV (1998), Thm 25.18 — efficient influence function is the projection onto the tangent space | `eif_eq_orthogonalProjection` | `Core/EIF.lean` |
+| vdV (1998), Lem 25.19 — efficiency bound as a supremum of inner-product ratios | `efficient_bound_eq_sup_ratio` | `Core/EIF.lean` |
+| vdV (1998), Thm 25.20 — convolution theorem and asymptotic variance lower bound | `semiparametric_convolution_theorem` | `LowerBounds/Convolution.lean` |
+| vdV (1998), Thm 25.21 — semiparametric local asymptotic minimax bound | `lam_semiparametric` | `LowerBounds/LAMSemiparametric.lean` |
+| vdV (1998), Eq (25.22) — asymptotically linear estimator with the EIF is efficient | `estimator_semiparametricallyEfficient_of_asympLinear_eif` | `Core/EfficiencyOperational.lean` |
+| vdV (1998), Lem 25.25 — efficient influence function from the efficient score | `eif_from_efficientScore` | `StrictModel/EfficientScore.lean` |
+| vdV (1998), Eq (25.30) — efficient influence function via the information operator | `eif_via_information_operator` | `Operators/ScoreOperator.lean` |
+| vdV (1998), Thm 25.31 — efficient influence function via the adjoint score equation | `eif_via_adjoint_equation` | `Operators/ScoreOperator.lean` |
+| vdV (1998), Eq (25.33) — efficient score as score minus its nuisance projection | `efficientScore_projection_formula` | `Operators/ScoreOperator.lean` |
+| vdV (1998), Cor 25.42 — influence function by subtracting the nuisance projection | `influence_on_sup_of_subtract_proj_nuisance` | `Core/EIF.lean` |
+| vdV (1998), Thm 25.54 — efficient-score Z-estimator is semiparametrically efficient | `zEstimator_semiparametricallyEfficient` | `Asymptotics/ZEstimator.lean` |
+| vdV (1998), Thm 25.57 — one-step corrected estimator is semiparametrically efficient | `oneStep_semiparametricallyEfficient` | `Asymptotics/OneStep.lean` |
+| vdV (1998), Thm 25.59 — Z-estimator expansion with explicit bias–residual term | `zEstimator_biasResidual_expansion` | `Asymptotics/ZEstimator.lean` |
+| vdV (1998), Thm 25.77 — least-favorable-path MLE is semiparametrically efficient | `mle_semiparametricallyEfficient` | `Asymptotics/LeastFavorable.lean` |
 
 ### Supporting Probability and Analysis Results
 
@@ -183,18 +183,18 @@ We also formalize the following standard results in probability and
 analysis that are used as load-bearing infrastructure by the
 asymptotic-statistics.
 
-| Name | File | Result |
-|------|------|--------|
-| `prekopaLeindler` | `ForMathlib/PrekopaLeindler.lean` | Prékopa–Leindler inequality on ℝⁿ [\[Prékopa 1973\]](#ref-prekopa1973) |
-| `anderson_lemma_independent` | `ForMathlib/Anderson.lean` | Anderson's lemma, independent coordinates [\[Anderson 1955\]](#ref-anderson1955) |
-| `mutuallyContiguous_of_asymptotically_log_normal` | `ForMathlib/Contiguity.lean` | Le Cam's first lemma (mutual contiguity from asymptotic log-normality) [\[vdV 1998, §6.4\]](#ref-vdv1998) |
-| `weak_limit_under_Q_of_lecam_third` | `ForMathlib/Contiguity.lean` | Le Cam's third lemma (weak limit transport under contiguity) [\[vdV 1998, §6.7\]](#ref-vdv1998) |
-| `levyMpass_vec` | `ForMathlib/LevyMpassVec.lean` | Lévy continuity theorem for vector-valued laws [\[Lévy 1925\]](#ref-levy1925) |
-| `tendstoInDistribution_multivariate_clt` | `ForMathlib/MultivariateCLT.lean` | Multivariate CLT via characteristic functions [\[Cramér–Wold 1936\]](#ref-cramerwold1936) |
-| `cramerWold_weakConverges` | `ForMathlib/CramerWoldWeakConverges.lean` | Cramér–Wold device for weak convergence [\[Cramér–Wold 1936\]](#ref-cramerwold1936) |
-| `WeakConverges.slutsky_of_tendstoInMeasure_dist` | `ForMathlib/Slutsky.lean` | Slutsky's theorem [\[Slutsky 1925\]](#ref-slutsky1925) |
-| `doobL2Equiv` | `ForMathlib/CondExpL2.lean` | Doob L² isometry: conditional expectation as L²(σ-sub-algebra) ≃ L²(comap) [\[Doob 1953\]](#ref-doob1953) |
-| `lpTrimComapToLpMap` | `ForMathlib/CondExpL2.lean` | Doob-style identification `Lᵖ(μ|_𝒢) ≃ Lᵖ(map μ)` [\[Doob 1953\]](#ref-doob1953) |
+| Results | Name | File |
+|--------|------|------|
+| Prékopa–Leindler inequality on ℝⁿ [\[Prékopa 1973\]](#ref-prekopa1973) | `prekopaLeindler` | `ForMathlib/PrekopaLeindler.lean` |
+| Anderson's lemma, independent coordinates [\[Anderson 1955\]](#ref-anderson1955) | `anderson_lemma_independent` | `ForMathlib/Anderson.lean` |
+| Le Cam's first lemma (mutual contiguity from asymptotic log-normality) [\[vdV 1998, §6.4\]](#ref-vdv1998) | `mutuallyContiguous_of_asymptotically_log_normal` | `ForMathlib/Contiguity.lean` |
+| Le Cam's third lemma (weak limit transport under contiguity) [\[vdV 1998, §6.7\]](#ref-vdv1998) | `weak_limit_under_Q_of_lecam_third` | `ForMathlib/Contiguity.lean` |
+| Lévy continuity theorem for vector-valued laws [\[Lévy 1925\]](#ref-levy1925) | `levyMpass_vec` | `ForMathlib/LevyMpassVec.lean` |
+| Multivariate CLT via characteristic functions [\[Cramér–Wold 1936\]](#ref-cramerwold1936) | `tendstoInDistribution_multivariate_clt` | `ForMathlib/MultivariateCLT.lean` |
+| Cramér–Wold device for weak convergence [\[Cramér–Wold 1936\]](#ref-cramerwold1936) | `cramerWold_weakConverges` | `ForMathlib/CramerWoldWeakConverges.lean` |
+| Slutsky's theorem [\[Slutsky 1925\]](#ref-slutsky1925) | `WeakConverges.slutsky_of_tendstoInMeasure_dist` | `ForMathlib/Slutsky.lean` |
+| Doob L² isometry: conditional expectation as L²(σ-sub-algebra) ≃ L²(comap) [\[Doob 1953\]](#ref-doob1953) | `doobL2Equiv` | `ForMathlib/CondExpL2.lean` |
+| Doob-style identification `Lᵖ(μ|_𝒢) ≃ Lᵖ(map μ)` [\[Doob 1953\]](#ref-doob1953) | `lpTrimComapToLpMap` | `ForMathlib/CondExpL2.lean` |
 
 ## References
 
