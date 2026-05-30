@@ -112,7 +112,7 @@ The concept layer that downstream theorems quantify over.
 
 | Name | File | Reference |
 |------|------|-----------|
-| `DifferentiableQuadraticMean` | `DQM/Defs.lean` | vdV (1998), Eq (7.1) — DQM |
+| `DifferentiableQuadraticMean` | `DQM/Defs.lean` | vdV (1998), Eq (7.1) — Differentiability in Quadratic Mean |
 | `QMDPath` | `Core/QMDPath.lean` | vdV (1998), §7.2 — quadratic-mean-differentiable path |
 | `RegularEstimatorSequence` | `ParametricFamily/RegularEstimator.lean` | vdV (1998), §8.5 — regular estimator sequence |
 | `IsRegularEstimator` | `LowerBounds/RegularEstimator.lean` | vdV (1998), §25.3 — regular estimator (semiparametric) |
@@ -131,51 +131,51 @@ The concept layer that downstream theorems quantify over.
 
 | Name | File | Reference |
 |------|------|-----------|
-| `paramSubmodel_DQM` | `ParametricFamily/SubmodelDQM.lean` | vdV (1998), Eq (7.1) |
-| `LAN_expansion` | `LocalAsymptoticNormality/LANExpansion.lean` | vdV (1998), Thm 7.2 |
+| `paramSubmodel_DQM` | `ParametricFamily/SubmodelDQM.lean` | vdV (1998), Eq (7.1) — parametric submodel is differentiable in quadratic mean |
+| `LAN_expansion` | `LocalAsymptoticNormality/LANExpansion.lean` | vdV (1998), Thm 7.2 — local asymptotic normality of the log-likelihood via score and Fisher information |
 
 ### Parametric Efficiency
 
 | Name | File | Reference |
 |------|------|-----------|
-| `contiguous_local_alternatives` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` | vdV (1998), Thm 6.5 |
-| `regularity_implies_8_2_hypothesis` | `Efficiency/HajekLeCamConvolution.lean` | vdV (1998), Thm 8.2 |
-| `LAN_representation_vdV` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` | vdV (1998), Thm 8.4 |
-| `anderson_lemma_set` | `ForMathlib/Anderson.lean` | vdV (1998), Lem 8.5 (Anderson 1955) |
-| `hajek_le_cam_convolution_theorem` | `Efficiency/HajekLeCamConvolution.lean` | vdV (1998), Thm 8.8 |
-| `local_asymptotic_minimax_bound` | `Efficiency/LocalAsymptoticMinimax.lean` | vdV (1998), Thm 8.11 |
+| `contiguous_local_alternatives` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` | vdV (1998), Thm 6.5 — mutual contiguity of local alternative sequences |
+| `regularity_implies_8_2_hypothesis` | `Efficiency/HajekLeCamConvolution.lean` | vdV (1998), Thm 8.2 — regular estimators satisfy the convergence-of-experiments hypothesis |
+| `LAN_representation_vdV` | `LocalAsymptoticNormality/AsymptoticRepresentation.lean` | vdV (1998), Thm 8.4 — asymptotic representation via a Gaussian-shift Markov kernel |
+| `anderson_lemma_set` | `ForMathlib/Anderson.lean` | vdV (1998), Lem 8.5 — Anderson's lemma for Gaussian superlevel sets |
+| `hajek_le_cam_convolution_theorem` | `Efficiency/HajekLeCamConvolution.lean` | vdV (1998), Thm 8.8 — regular estimator limit factors as a Gaussian convolution |
+| `local_asymptotic_minimax_bound` | `Efficiency/LocalAsymptoticMinimax.lean` | vdV (1998), Thm 8.11 — local asymptotic minimax lower bound for the risk |
 
 ### Empirical processes
 
 | Name | File | Reference |
 |------|------|-----------|
-| `isPGlivenkoCantelli_of_finite_bracketing_L1` | `EmpiricalProcess/GlivenkoCantelli.lean` | vdV (1998), Thm 19.4 |
-| `isPDonsker_of_finite_bracketing_entropy_integral` | `EmpiricalProcess/DonskerBracketing.lean` | vdV (1998), Thm 19.5 |
-| `donsker_random_function_consistency` | `EmpiricalProcess/RandomFunctions.lean` | vdV (1998), Lem 19.24 |
-| `empiricalProcess_param_estimation` | `EmpiricalProcess/ParameterEstimation.lean` | vdV (1998), Thm 19.26 |
-| `bernstein_inequality` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.32 |
-| `finite_sup_bound` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.33 |
-| `maximal_inequality_bracketing` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.34 |
+| `isPGlivenkoCantelli_of_finite_bracketing_L1` | `EmpiricalProcess/GlivenkoCantelli.lean` | vdV (1998), Thm 19.4 — finite L¹-bracketing implies the Glivenko–Cantelli property |
+| `isPDonsker_of_finite_bracketing_entropy_integral` | `EmpiricalProcess/DonskerBracketing.lean` | vdV (1998), Thm 19.5 — finite bracketing entropy integral implies the Donsker property |
+| `donsker_random_function_consistency` | `EmpiricalProcess/RandomFunctions.lean` | vdV (1998), Lem 19.24 — empirical process at a consistent random argument is negligible |
+| `empiricalProcess_param_estimation` | `EmpiricalProcess/ParameterEstimation.lean` | vdV (1998), Thm 19.26 — empirical process convergence under estimated parameters |
+| `bernstein_inequality` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.32 — Bernstein tail bound for empirical sums |
+| `finite_sup_bound` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.33 — expected maximum over a finite function class |
+| `maximal_inequality_bracketing` | `EmpiricalProcess/Maximal.lean` | vdV (1998), Lem 19.34 — bracketing maximal inequality for the empirical process |
 
 ### Semiparametric models and efficiency
 
 | Name | File | Reference |
 |------|------|-----------|
-| `score_in_L2ZeroMean` | `Core/QMDPath.lean` | vdV (1998), Lem 25.14 |
-| `eif_eq_orthogonalProjection` | `Core/EIF.lean` | vdV (1998), Thm 25.18 |
-| `efficient_bound_eq_sup_ratio` | `Core/EIF.lean` | vdV (1998), Lem 25.19 |
-| `semiparametric_convolution_theorem` | `LowerBounds/Convolution.lean` | vdV (1998), Thm 25.20 |
-| `lam_semiparametric` | `LowerBounds/LAMSemiparametric.lean` | vdV (1998), Thm 25.21 |
-| `estimator_semiparametricallyEfficient_of_asympLinear_eif` | `Core/EfficiencyOperational.lean` | vdV (1998), Eq (25.22) |
-| `eif_from_efficientScore` | `StrictModel/EfficientScore.lean` | vdV (1998), Lem 25.25 |
-| `eif_via_information_operator` | `Operators/ScoreOperator.lean` | vdV (1998), Eq (25.30) |
-| `eif_via_adjoint_equation` | `Operators/ScoreOperator.lean` | vdV (1998), Thm 25.31 |
-| `efficientScore_projection_formula` | `Operators/ScoreOperator.lean` | vdV (1998), Eq (25.33) |
-| `influence_on_sup_of_subtract_proj_nuisance` | `Core/EIF.lean` | vdV (1998), Cor 25.42 |
-| `zEstimator_semiparametricallyEfficient` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.54 |
-| `oneStep_semiparametricallyEfficient` | `Asymptotics/OneStep.lean` | vdV (1998), Thm 25.57 |
-| `zEstimator_biasResidual_expansion` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.59 |
-| `mle_semiparametricallyEfficient` | `Asymptotics/LeastFavorable.lean` | vdV (1998), Thm 25.77 |
+| `score_in_L2ZeroMean` | `Core/QMDPath.lean` | vdV (1998), Lem 25.14 — score is mean-zero and square-integrable |
+| `eif_eq_orthogonalProjection` | `Core/EIF.lean` | vdV (1998), Thm 25.18 — efficient influence function is the projection onto the tangent space |
+| `efficient_bound_eq_sup_ratio` | `Core/EIF.lean` | vdV (1998), Lem 25.19 — efficiency bound as a supremum of inner-product ratios |
+| `semiparametric_convolution_theorem` | `LowerBounds/Convolution.lean` | vdV (1998), Thm 25.20 — convolution theorem and asymptotic variance lower bound |
+| `lam_semiparametric` | `LowerBounds/LAMSemiparametric.lean` | vdV (1998), Thm 25.21 — semiparametric local asymptotic minimax bound |
+| `estimator_semiparametricallyEfficient_of_asympLinear_eif` | `Core/EfficiencyOperational.lean` | vdV (1998), Eq (25.22) — asymptotically linear estimator with the EIF is efficient |
+| `eif_from_efficientScore` | `StrictModel/EfficientScore.lean` | vdV (1998), Lem 25.25 — efficient influence function from the efficient score |
+| `eif_via_information_operator` | `Operators/ScoreOperator.lean` | vdV (1998), Eq (25.30) — efficient influence function via the information operator |
+| `eif_via_adjoint_equation` | `Operators/ScoreOperator.lean` | vdV (1998), Thm 25.31 — efficient influence function via the adjoint score equation |
+| `efficientScore_projection_formula` | `Operators/ScoreOperator.lean` | vdV (1998), Eq (25.33) — efficient score as score minus its nuisance projection |
+| `influence_on_sup_of_subtract_proj_nuisance` | `Core/EIF.lean` | vdV (1998), Cor 25.42 — influence function by subtracting the nuisance projection |
+| `zEstimator_semiparametricallyEfficient` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.54 — efficient-score Z-estimator is semiparametrically efficient |
+| `oneStep_semiparametricallyEfficient` | `Asymptotics/OneStep.lean` | vdV (1998), Thm 25.57 — one-step corrected estimator is semiparametrically efficient |
+| `zEstimator_biasResidual_expansion` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.59 — Z-estimator expansion with explicit bias–residual term |
+| `mle_semiparametricallyEfficient` | `Asymptotics/LeastFavorable.lean` | vdV (1998), Thm 25.77 — least-favorable-path MLE is semiparametrically efficient |
 
 ### Supporting Probability and Analysis Results
 
