@@ -10,6 +10,25 @@ estimation theory, especially parametric and semiparametric efficiency theory.
 The development was produced under a hypothesis-disciplined
 multi-agent workflow using the reference of [van der Vaart (1998)](https://www.cambridge.org/core/books/asymptotic-statistics/A3C7DAD3F7E66A1FA60E9C8FE132EE1D).
 
+
+- [Asymptotic Statistical Theory in Lean 4](#asymptotic-statistical-theory-in-lean-4)
+  - [Installation Guide](#installation-guide)
+    - [1. Make sure you have installed Lean. We suggest installing `elan`.](#1-make-sure-you-have-installed-lean-we-suggest-installing-elan)
+    - [2. Clone the repository](#2-clone-the-repository)
+    - [3. Fetch the Mathlib build cache](#3-fetch-the-mathlib-build-cache)
+    - [4. Build the library](#4-build-the-library)
+    - [5. Use the library as a dependency](#5-use-the-library-as-a-dependency)
+  - [Formalization Results](#formalization-results)
+    - [Core definitions](#core-definitions)
+    - [Local Asymptotic Normality](#local-asymptotic-normality)
+    - [Parametric Efficiency](#parametric-efficiency)
+    - [Empirical processes](#empirical-processes)
+    - [Semiparametric models and efficiency](#semiparametric-models-and-efficiency)
+    - [Supporting Probability and Analysis Results](#supporting-probability-and-analysis-results)
+  - [References](#references)
+
+
+
 ## Installation Guide 
 
 ### 1. Make sure you have [installed Lean](https://leanprover-community.github.io/get_started.html). We suggest installing `elan`.
@@ -85,6 +104,7 @@ repository's `lean-toolchain` file.
 
 We formalize the following results from van der Vaart (1998),
 *Asymptotic Statistics*.
+
 
 ### Core definitions
 
