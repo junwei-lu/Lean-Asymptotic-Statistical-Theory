@@ -158,13 +158,11 @@ The concept layer that downstream theorems quantify over.
 | `zEstimator_biasResidual_expansion` | `Asymptotics/ZEstimator.lean` | vdV (1998), Thm 25.59 |
 | `mle_semiparametricallyEfficient` | `Asymptotics/LeastFavorable.lean` | vdV (1998), Thm 25.77 |
 
-### Foundational results (not yet in Mathlib)
+### Supporting Probability and Analysis Results
 
 We also formalize the following standard results in probability and
 analysis that are used as load-bearing infrastructure by the
-asymptotic-statistics layer but are not yet available upstream in
-Mathlib `v4.29.1`.  Each row links to the bibliography entry in
-[§ References](#references).
+asymptotic-statistics.
 
 | Name | File | Result |
 |------|------|--------|
