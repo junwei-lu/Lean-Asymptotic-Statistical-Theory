@@ -1,15 +1,14 @@
-# Asymptotic Statistics in Lean 4: A Source-Faithful Formalization of Parametric and Semiparametric Efficiency Theory
+# Asymptotic Statistical Theory in Lean 4
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/Lean-4-blueviolet?style=for-the-badge" alt="Lean 4"></a>
   <a href="#"><img src="https://img.shields.io/badge/Mathlib-v4.29.1-brightgreen?style=for-the-badge" alt="Mathlib"></a>
 
-## Abstract
 
 We present a systematic Lean 4 formalization of asymptotic statistical
-estimation theory.  
+estimation theory, especially parametric and semiparametric efficiency theory.
 The development was produced under a hypothesis-disciplined
-multi-agent workflow.
+multi-agent workflow using the reference of [van der Vaart (1998)](https://www.cambridge.org/core/books/asymptotic-statistics/A3C7DAD3F7E66A1FA60E9C8FE132EE1D).
 
 ## Installation Guide 
 
