@@ -115,7 +115,7 @@ The concept layer that downstream theorems quantify over.
 | vdV (1998), Eq (7.1) — Differentiability in Quadratic Mean | `DifferentiableQuadraticMean` | `DQM/Defs.lean` |
 | vdV (1998), §7.2 — quadratic-mean-differentiable path | `QMDPath` | `Core/QMDPath.lean` |
 | vdV (1998), §8.5 — regular estimator sequence | `RegularEstimatorSequence` | `ParametricFamily/RegularEstimator.lean` |
-| vdV (1998), §25.3 — regular estimator (semiparametric) | `IsRegularEstimator` | `LowerBounds/RegularEstimator.lean` |
+| vdV (1998), §25.3 — regular estimator (semiparametric) | `IsRegularEstimator` / `IsRegularEstimator_vec` | `LowerBounds/RegularEstimator.lean`, `LowerBounds/RegularEstimatorVec.lean` |
 | vdV (1998), §8.7 — bowl-shaped loss function | `BowlShaped` | `ForMathlib/BowlShaped.lean` |
 | vdV (1998), §25.3 — tangent set / tangent space | `TangentSpec` | `Core/TangentAbstract.lean` |
 | vdV (1998), §8.2 — Gaussian shift experiment | `IsGaussianShift` | `Experiment/GaussianShift.lean` |
@@ -165,7 +165,9 @@ The concept layer that downstream theorems quantify over.
 | vdV (1998), Thm 25.18 — efficient influence function is the projection onto the tangent space | `eif_eq_orthogonalProjection` | `Core/EIF.lean` |
 | vdV (1998), Lem 25.19 — efficiency bound as a supremum of inner-product ratios | `efficient_bound_eq_sup_ratio` | `Core/EIF.lean` |
 | vdV (1998), Thm 25.20 — convolution theorem and asymptotic variance lower bound | `semiparametric_convolution_theorem` | `LowerBounds/Convolution.lean` |
-| vdV (1998), Thm 25.21 — semiparametric local asymptotic minimax bound | `lam_semiparametric` | `LowerBounds/LAMSemiparametric.lean` |
+| vdV (1998), Thm 25.20 — vector convolution theorem and covariance lower bound | `semiparametric_convolution_theorem_vec` | `LowerBounds/ConvolutionVec.lean` |
+| vdV (1998), Thm 25.21 — semiparametric local asymptotic minimax bound | `semiparametric_local_asymptotic_minimax_theorem` | `LowerBounds/LAM.lean` |
+| vdV (1998), Thm 25.21 — scalar semiparametric local asymptotic minimax corollary | `semiparametric_local_asymptotic_minimax_theorem_real` | `LowerBounds/LAM.lean` |
 | vdV (1998), Eq (25.22) — asymptotically linear estimator with the EIF is efficient | `estimator_semiparametricallyEfficient_of_asympLinear_eif` | `Core/EfficiencyOperational.lean` |
 | vdV (1998), Lem 25.25 — efficient influence function from the efficient score | `eif_from_efficientScore` | `StrictModel/EfficientScore.lean` |
 | vdV (1998), Eq (25.30) — efficient influence function via the information operator | `eif_via_information_operator` | `Operators/ScoreOperator.lean` |
