@@ -1,8 +1,8 @@
 # Asymptotica — the interactive atlas
 
-A React + Vite + Tailwind front-end that aligns the informal statements of
-van der Vaart's *Asymptotic Statistics* with their Lean 4 / Mathlib
-formalizations. Deployed to GitHub Pages at
+A React + Vite + Tailwind front-end that aligns informal mathematical statements
+with their Lean 4 / Mathlib formalizations, organized across four categories of
+asymptotic statistical theory. Deployed to GitHub Pages at
 `https://junwei-lu.github.io/Lean-Asymptotic-Statistical-Theory/website/`.
 
 ## Develop
@@ -22,8 +22,7 @@ The site is driven by two data layers:
    (informal statement with `$…$` KaTeX math and `<span data-link="hN">` hover
    anchors, the exact Lean statement signature, the hypothesis ↔ informal-text
    correspondence, citation, and doc-gen4 URL). The schema is in
-   `src/lib/types.ts`. The four per-category source slices live in
-   `src/data/cat-*.json` and are merged into `results.json`.
+   `src/lib/types.ts`.
 
 2. **`src/data/graphs/<id>.json`** — generated dependency graphs. Produced by
    the Lean executable `Scripts/ExtractDeps.lean`:
@@ -40,6 +39,17 @@ The site is driven by two data layers:
    link to the Mathlib docs. The targets list is `website/targets.txt`
    (`<id>\t<fullName>` per line), regenerated from `results.json`.
 
+## Categories
+
+Results are organized into four categories (defined in `src/lib/categories.ts`):
+
+| Category | `id` | Content |
+|---|---|---|
+| Parametric Statistics | `parametric` | Local asymptotic normality, DQM, LAN expansion, Hájek–Le Cam bounds |
+| Semiparametric Statistics | `semiparametric` | Tangent spaces, efficient influence functions, score operators |
+| Empirical Processes | `empirical` | Glivenko–Cantelli, Donsker, bracketing entropy, maximal inequalities |
+| Miscellaneous Results | `probability` | Prékopa–Leindler, Anderson's lemma, Le Cam lemmas, multivariate CLT |
+
 ## Key features
 
 - **Side-by-side panes** — informal statement (left) vs. Lean code (right).
@@ -47,8 +57,9 @@ The site is driven by two data layers:
   corresponding informal phrase and the legend entry, and vice-versa
   (`src/pages/ResultDetail.tsx`, driven by `data-link` ids).
 - **Dependency graphs** — Cytoscape + dagre, lazy-loaded on demand.
-- **doc-gen4 + source links** per result.
-- Parchment / midnight dual theme with a per-category accent system.
+- **doc-gen4 + source links** per result, pointing to
+  `https://junwei-lu.github.io/Lean-Asymptotic-Statistical-Theory/docs/`.
+- Dark / light dual theme with a per-category accent system.
 
 ## Deployment
 

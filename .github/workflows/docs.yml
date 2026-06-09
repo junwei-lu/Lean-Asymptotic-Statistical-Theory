@@ -112,7 +112,10 @@ jobs:
       - name: Prepare GitHub Pages site
         run: |
           mkdir -p site/docs site/website
-          cp -r .lake/build/doc/* site/docs/
+          # Copy Lean docs only when they were built or restored from cache.
+          if [ -d ".lake/build/doc" ] && [ "$(ls -A .lake/build/doc 2>/dev/null)" ]; then
+            cp -r .lake/build/doc/* site/docs/
+          fi
           cp -r website/dist/* site/website/
           # Root redirects visitors to the interactive Asymptotica website.
           cat > site/index.html <<'EOF'
