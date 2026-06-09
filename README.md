@@ -6,20 +6,11 @@
 
 
   <p>
-    <a href="https://github.com/junwei-lu/Lean-Asymptotic-Statistical-Theory/actions/workflows/docs.yml">
-      <img src="https://github.com/junwei-lu/Lean-Asymptotic-Statistical-Theory/actions/workflows/docs.yml/badge.svg" alt="GitHub CI" />
-    </a>
     <a href="https://junwei-lu.github.io/Lean-Asymptotic-Statistical-Theory/website/">
       <img src="https://img.shields.io/badge/website-Stat--Lean%20Website-orange?logo=github" alt="Website" />
     </a>
     <a href="https://junwei-lu.github.io/Lean-Asymptotic-Statistical-Theory/docs/">
       <img src="https://img.shields.io/badge/docs-API%20Documents-blueviolet?logo=readthedocs&logoColor=white" alt="API Docs" />
-    </a>
-    <a href="https://leanprover.github.io/">
-      <img src="https://img.shields.io/badge/Lean-4-blue?logo=lambda&logoColor=white" alt="Lean 4" />
-    </a>
-    <a href="https://leanprover-community.github.io/mathlib4_docs/">
-      <img src="https://img.shields.io/badge/Mathlib-v4.29.1-brightgreen" alt="Mathlib v4.29.1" />
     </a>
     <a href="LICENSE">
       <img src="https://img.shields.io/badge/license-Apache%202.0-lightgrey" alt="License" />
@@ -141,7 +132,7 @@ then run `lake update && lake exe cache get && lake build`. Your project must us
 
 ## Formalization Results
 
-We formalize the following results from van der Vaart (1998), *Asymptotic Statistics*.
+We formalize the following results from [van der Vaart (1998), *Asymptotic Statistics*](https://www.cambridge.org/core/books/asymptotic-statistics/A3C7DAD3F7E66A1FA60E9C8FE132EE1D).
 
 
 
