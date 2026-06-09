@@ -1,4 +1,4 @@
-# Asymptotica — the interactive atlas
+# Stat-Lean — the interactive website
 
 A React + Vite + Tailwind front-end that aligns informal mathematical statements
 with their Lean 4 / Mathlib formalizations, organized across four categories of
@@ -56,13 +56,20 @@ Results are organized into four categories (defined in `src/lib/categories.ts`):
 - **Bidirectional hover-linking** — hovering a Lean hypothesis highlights the
   corresponding informal phrase and the legend entry, and vice-versa
   (`src/pages/ResultDetail.tsx`, driven by `data-link` ids).
-- **Dependency graphs** — Cytoscape + dagre, lazy-loaded on demand.
+- **Note on informalization** — each result has a dedicated note box explaining
+  design choices, typeclass decisions, and how the Lean encoding relates to the
+  textbook statement.
+- **Dependency graphs** — Cytoscape + fcose, lazy-loaded on demand.
 - **doc-gen4 + source links** per result, pointing to
   `https://junwei-lu.github.io/Lean-Asymptotic-Statistical-Theory/docs/`.
-- Dark / light dual theme with a per-category accent system.
+- **Team page** — linked from the top navigation bar.
+- Light / dark dual theme (defaults to light) with a per-category accent system.
 
 ## Deployment
 
-`.github/workflows/docs.yml` builds the doc-gen4 API docs, runs `lake exe deps`,
-builds this site, and serves all three under one GitHub Pages artifact:
-`…/` (landing) · `…/docs/` (API) · `…/website/` (this atlas).
+`.github/workflows/docs.yml` builds the doc-gen4 API docs (only when Lean
+sources change), runs `lake exe deps`, builds this site, and serves everything
+under one GitHub Pages artifact:
+`…/` (landing) · `…/docs/` (API) · `…/website/` (this site).
+
+Website-only pushes skip the 45-minute Lean build entirely.
