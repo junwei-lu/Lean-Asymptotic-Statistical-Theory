@@ -4,6 +4,21 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'AsymptoticStatistics/**'
+      - 'AsymptoticStatistics.lean'
+      - 'lakefile.lean'
+      - 'lean-toolchain'
+      - 'lake-manifest.json'
+      - 'Scripts/**'
+      - 'website/src/**'
+      - 'website/public/**'
+      - 'website/package*.json'
+      - 'website/index.html'
+      - 'website/vite.config.ts'
+      - 'website/tailwind.config.js'
+      - 'website/tsconfig.json'
+      - '.github/workflows/docs.yml'
   workflow_dispatch:
 
 permissions:
